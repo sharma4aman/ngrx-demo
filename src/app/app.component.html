@@ -1,2 +1,15 @@
-App Component works!
-<router-outlet></router-outlet>
+<div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <app-add-book-form (onSubmit)="submit($event)">
+          </app-add-book-form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+              <app-book-list [books]="books">
+              </app-book-list>
+            <div>Total Book count: {{bookCount}}</div>
+        </div>
+    </div>
+</div>

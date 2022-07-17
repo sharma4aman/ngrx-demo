@@ -6,5 +6,10 @@ export const selectFeature = (state: AppState) => state.book;
 
 export const getAllBooks = createSelector(
     selectFeature,
-    (state: BookState) => state.books
+    (book: BookState) => book.books
+);
+
+export const getAllBooksCount = createSelector(
+    selectFeature,
+    (book: BookState) => book.books.length
 );
