@@ -10,12 +10,14 @@ import { BookEffects } from './store/books/books.effects';
 import { reducers } from './store/core.reducers';
 import { AddBookFormComponent } from './form-components/add-book-form/add-book-form.component';
 import { BookListComponent } from './presentation-components/book-list/book-list.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddBookFormComponent,
-    BookListComponent
+    BookListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
