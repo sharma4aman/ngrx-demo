@@ -7,7 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BookEffects } from './store/books/books.effects';
-import { reducers } from './store/core.reducers';
+import { coreReducers } from './store/core.reducers';
 import { AddBookFormComponent } from './form-components/add-book-form/add-book-form.component';
 import { BookListComponent } from './presentation-components/book-list/book-list.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
@@ -24,7 +24,7 @@ import { NavbarComponent } from './layout/navbar/navbar.component';
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    StoreModule.forRoot(reducers, {}),
+    StoreModule.forRoot(coreReducers, {}),
     EffectsModule.forRoot([BookEffects])
   ],
   providers: [],

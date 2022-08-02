@@ -18,10 +18,12 @@ export class BookEffects {
         { dispatch: false }
     );
     
-    // addBook$ = createEffect(() =>
-    // this.actions$.pipe(
-    //     ofType(BookActions.AddBookAction), 
-    //     tap(() => alert("Book added to library.")))
-    // );
+    addBook$ = createEffect(() =>
+    this.actions$.pipe(
+        ofType(BookActions.AddBookAction),
+        tap(() => {
+            alert("Yay! You just added a book.");
+        })
+    ), {dispatch: false});
 
 }
